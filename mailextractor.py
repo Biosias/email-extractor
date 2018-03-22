@@ -29,7 +29,6 @@ def extrMail(adressa, provFilter, filterChoose):
             word = word.replace(word, "")
         if word[:1] == "@":
             word = word.replace(word, "")
-            for wordb in adArrayc:
         if "@" in word:
             if filterChoose == True:
                     if provFilter in word:
@@ -37,6 +36,7 @@ def extrMail(adressa, provFilter, filterChoose):
             else:
                 adArrayb.append(word)
     adArrayc = set(adArrayb)
+    for wordb in adArrayc:
             OutFile.write(wordb + "\n")
             print(wordb + "\n")
 adressa = remBor(adressa)
